@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta name="theme-color" content="#d4849c" />
+    <title>Briefies 💌</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script>
+      // A fresh visit to the app must pass through the startup screen first.
+      // startup.html sets this one-use token after a successful key entry.
+      try {
+        if (sessionStorage.getItem("onsStartupPassed") !== "1") {
+          window.location.replace("startup.html");
+        }
+      } catch (error) {
+        window.location.replace("startup.html");
+      }
+
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then((reg) => console.log("Service Worker registered:", reg))
+          .catch((err) =>
+            console.error("Service Worker registration failed:", err),
+          );
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="page-title">Briefies</h1>
+      <div class="heartheader"></div>
+    </header>
+
+    <div class="relationship-card">
+      <h4>Maande Saam: 💖</h4>
+      <p id="monthsTogether">—</p>
+    </div>
+
+    <div class="relationship-card">
+      <h4>Weke Saam: 💖</h4>
+      <p id="weeksTogether">—</p>
+    </div>
+
+    <div class="relationship-card">
+      <h4>Dae Saam: 💖</h4>
+      <p id="daysTogether">—</p>
+    </div>
+
+    <div class="relationship-card">
+      <h4>Monthiversary: 💝</h4>
+      <p id="anniversaryCountdown">—</p>
+    </div>
+
+    <h3><b>My Engel Liefste se Briefies..💌</b></h3>
+
+    <main>
+      <section>
+        <h3><b>Willem</b></h3>
+      <div class="letter-box" onclick="openLetter('letter1')">
+        <h2>1 Maand ❤️</h2>
+      </div>
+      <div id="letter1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter1')">&times;</span>
+          <div class="modal-header">💖 1 Maand</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-box" onclick="openLetter('letter2')">
+        <h2>2 Maande ❤️</h2>
+      </div>
+      <div id="letter2" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter2')">&times;</span>
+          <div class="modal-header">💖 2 Maande</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-box" onclick="openLetter('letter3')">
+        <h2>3 Maande ❤️</h2>
+      </div>
+      <div id="letter3" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter3')">&times;</span>
+          <div class="modal-header">💖 3 Maande</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-box" onclick="openLetter('letter4')">
+        <h2>4 Maande ❤️</h2>
+      </div>
+      <div id="letter4" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter4')">&times;</span>
+          <div class="modal-header">💖 4 Maande</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-box" onclick="openLetter('letter5')">
+        <h2>5 Maande ❤️</h2>
+      </div>
+      <div id="letter5" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter5')">&times;</span>
+          <div class="modal-header">💖 5 Maande</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-box" onclick="openLetter('letter6')">
+        <h2>6 Maande ❤️</h2>
+      </div>
+      <div id="letter6" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter6')">&times;</span>
+          <div class="modal-header">💖 6 Maande</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section>
+        <h3><b>Cayla</b></h3>
+      <div class="letter-box" onclick="openLetter('letter1')">
+        <h2>1 Maand ❤️</h2>
+      </div>
+      <div id="letter1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter1')">&times;</span>
+          <div class="modal-header">💖 1 Maand</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-box" onclick="openLetter('letter2')">
+        <h2>2 Maande ❤️</h2>
+      </div>
+      <div id="letter2" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter2')">&times;</span>
+          <div class="modal-header">💖 2 Maande</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-box" onclick="openLetter('letter3')">
+        <h2>3 Maande ❤️</h2>
+      </div>
+      <div id="letter3" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter3')">&times;</span>
+          <div class="modal-header">💖 3 Maande</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-box" onclick="openLetter('letter4')">
+        <h2>4 Maande ❤️</h2>
+      </div>
+      <div id="letter4" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter4')">&times;</span>
+          <div class="modal-header">💖 4 Maande</div>
+          <div class="modal-body">
+            <p>hi</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-box" onclick="openLetter('letter5')">
+        <h2>5 Maande ❤️</h2>
+      </div>
+      <div id="letter5" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter5')">&times;</span>
+          <div class="modal-header">💖 5 Maande</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-box" onclick="openLetter('letter6')">
+        <h2>6 Maande ❤️</h2>
+      </div>
+      <div id="letter6" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLetter('letter6')">&times;</span>
+          <div class="modal-header">💖 6 Maande</div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+
+      </section>
+      </main>
+
+
+
+      <button id="installBtn" class="install-btn" style="display: none">
+      📲 Install App
+    </button>
+
+    <button
+      id="share-trigger"
+      class="share-btn"
+      type="button"
+      aria-label="Share this app"
+    >
+      <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share
+    </button>
+    <dialog
+      id="share-dialog"
+      class="share-dialog"
+      aria-labelledby="share-dialog-title"
+    >
+      <button class="share-dialog-close" type="button" aria-label="Close">
+        &times;
+      </button>
+      <h2 id="share-dialog-title">Share our app</h2>
+      <p>Scan this QR code to open it</p>
+      <img class="share-qr" src="YOURQR.png" alt="QR code linking to our app" />
+      <button id="share-link" class="share-link-btn" type="button">
+        <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share link
+      </button>
+      <p
+        id="share-status"
+        class="share-status"
+        role="status"
+        aria-live="polite"
+      ></p>
+    </dialog>
+
+    <script>
+      const shareDialog = document.getElementById("share-dialog");
+      document
+        .getElementById("share-trigger")
+        .addEventListener("click", () => shareDialog.showModal());
+      document
+        .querySelector(".share-dialog-close")
+        .addEventListener("click", () => shareDialog.close());
+
+      document
+        .getElementById("share-link")
+        .addEventListener("click", async () => {
+          const shareData = {
+            title: document.title,
+            text: "Have a look at our memories",
+            url: "",
+          };
+          const status = document.getElementById("share-status");
+          try {
+            if (navigator.share) {
+              await navigator.share(shareData);
+            } else if (navigator.clipboard && window.isSecureContext) {
+              await navigator.clipboard.writeText(shareData.url);
+              status.textContent = "App link copied!";
+            } else {
+              window.prompt("Copy this app link:", shareData.url);
+            }
+          } catch (error) {
+            if (error.name !== "AbortError")
+              status.textContent = "Unable to share right now.";
+          }
+        });
+    </script>
+
+    <script src="main.js"></script>
+    <footer>
+      <nav class="nav-bar">
+      <button class="a" type="button" aria-label="Photo album" onclick="page1()"><i class="fa fa-image" aria-hidden="true"></i></button>
+      <button class="a" type="button" aria-label="Letters" aria-current="page" onclick="page2()">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </button>
+      <button class="a" type="button" aria-label="Playlist" onclick="page3()"><i class="fa fa-music" aria-hidden="true"></i></button>
+      </nav>
+    </footer>
+  </body>
+</html>

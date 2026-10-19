@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e5e5e5">
+  <title>Startup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e5e5e5;
+      color: #202124;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      min-height: 100dvh;
+      margin: 0;
+      padding: 1rem;
+    }
+    .login-box {
+      background: #faf8f5;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    input[type="password"] {
+      padding: 10px;
+      width: 200px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #8f1d31;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #701629;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>Welcome</h1>
+    <label for="password">Enter the access code</label><br>
+    <input type="password" id="password" autocomplete="current-password" aria-describedby="message">
+    <br>
+    <button type="button" onclick="checkPassword()">Open app</button>
+    <p id="message" role="status" aria-live="polite"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      // Brother: update the access code here. A code stored in a static page is only a friendly gate, not secure protection.
+      const correctPassword = "123";
+      const message = document.getElementById("message");
+
+      if (input === correctPassword) {
+        sessionStorage.setItem("onsStartupPassed", "1");
+        message.style.color = "green";
+        message.textContent = "Access granted!";
+        // redirect or load another page
+        window.location.replace("W&C.html");
+      } else {
+        message.style.color = "red";
+        message.textContent = "Incorrect password.";
+      }
+    }
+
+    // Add Enter key listener
+    document.getElementById("password").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        checkPassword();
+      }
+    });
+  </script>
+</body>
+</html>

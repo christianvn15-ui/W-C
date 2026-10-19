@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e5e5e5">
+  <title>Playlist 🎧</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js")
+        .then(reg => console.log("Service Worker registered:", reg))
+        .catch(err => console.error("Service Worker registration failed:", err));
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Playlist</h1>
+    <div class="heartheader"></div>
+  </header>
+
+  <h3>Liedjies oor my Engel Liefste</h3>
+
+  <main>
+    <div class="card">
+      <h2>Belong Together</h2>
+      <audio controls preload="none">
+        <source src="Belong Together.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <h2>Thank God</h2>
+      <audio controls preload="none">
+        <source src="Thank God.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <h2>All I'll Ever Need</h2>
+      <audio controls preload="none">
+        <source src="All I'll Ever Need.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <h2>Soen</h2>
+      <audio controls preload="none">
+        <source src="Soen.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <h2>Forever And Ever Amen</h2>
+      <audio controls preload="none">
+        <source src="Forever And Ever Amen.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <h2>Once In A Lifetime</h2>
+      <audio controls preload="none">
+        <source src="Once in a lifetime.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <h2>Butterflies</h2>
+      <audio controls preload="none">
+        <source src="Butterflies.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <h2>Diner 39</h2>
+      <audio controls preload="none">
+        <source src="Diner 39 - Franna Benadé(Official Music Video).mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    
+    <div class="card">
+      <h2>Fairytale</h2>
+      <audio controls preload="none">
+        <source src="Fairytale - Dirk van der Westhuizen.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="card">
+      <h2>Beautiful Kind of Crazy</h2>
+      <audio controls preload="none">
+        <source src="Christian - Beautiful Kind of Crazy.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+<footer>
+  <nav class="nav-bar">
+      <button class="a" type="button" aria-label="Photo album" onclick="page1()"><i class="fa fa-image" aria-hidden="true"></i></button>
+      <button class="a" type="button" aria-label="Letters" onclick="page2()"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+      <button class="a" type="button" aria-label="Playlist" aria-current="page" onclick="page3()"><i class="fa fa-music" aria-hidden="true"></i></button>
+  </nav>
+</footer>
+</html>

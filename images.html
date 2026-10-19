@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e5e5e5">
+  <title>Foto Album 📸</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js")
+        .then(reg => console.log("Service Worker registered:", reg))
+        .catch(err => console.error("Service Worker registration failed:", err));
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Foto Album</h1>
+    <div class="heartheader"></div>
+  </header>
+
+  <h3>Ons Foto's</h3>
+
+  <main>
+
+    <div class="card-img">
+      <a href="Ons10.png" download>
+        <img src="Ons10.png" alt="Ons Foto 10" loading="lazy">
+      </a>
+      <p>Een baie lekker daggie🥹😋</p>
+    </div>
+
+    <div class="card-img">
+      <a href="Ons9.png" download>
+        <img src="Ons9.png" alt="Ons Foto 9" loading="lazy">
+      </a>
+      <p>Ons né...🤣😋</p>
+    </div>
+
+    <div class="card-img">
+      <a href="Ons8.png" download>
+        <img src="Ons8.png" alt="Ons Foto 8" loading="lazy">
+      </a>
+      <p>Hehehe😊🤭</p>
+    </div>
+
+    <div class="card-img">
+      <a href="Ons7.png" download>
+        <img src="Ons7.png" alt="Ons Foto 7" loading="lazy">
+      </a>
+      <p>🤭😜</p>
+    </div>
+
+    <div class="card-img">
+      <a href="Ons6.png" download>
+        <img src="Ons6.png" alt="Ons Foto 6" loading="lazy">
+      </a>
+      <p>Een van die baie lekker dae🤭</p>
+    </div>
+
+    <div class="card-img">
+      <a href="Ons5.png" download>
+        <img src="Ons5.png" alt="Ons Foto 5" loading="lazy">
+      </a>
+      <p>Eerste behoorlike date!🤣😊</p>
+    </div>
+
+    <div class="card-img">
+      <a href="Ons4.png" download>
+        <img src="Ons4.png" alt="Ons Foto 4" loading="lazy">
+      </a>
+      <p>Ek moes jou toe al soen..😋🤭</p>
+    </div>
+
+    <div class="card-img">
+      <a href="Ons3.png" download>
+        <img src="Ons3.png" alt="Ons Foto 3" loading="lazy">
+      </a>
+      <p>Jy lyk sooo stunnniinngggg!😊😍</p>
+    </div>
+
+    <div class="card-img">
+      <a href="Ons2.png" download>
+        <img src="Ons2.png" alt="Ons Foto 2" loading="lazy">
+      </a>
+      <p>🤭🤣</p>
+    </div>
+
+    <div class="card-img">
+      <a href="Ons1.png" download>
+        <img src="Ons1.png" alt="Ons Foto 1" loading="lazy">
+      </a>
+      <p>Ons eerste foto saam!🤣🫠</p>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+<footer>
+  <nav class="nav-bar">
+      <button type="button" aria-label="Photo album" aria-current="page" onclick="page1()"><i class="fa fa-image" aria-hidden="true"></i></button>
+      <button type="button" aria-label="Letters" onclick="page2()"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+      <button type="button" aria-label="Playlist" onclick="page3()"><i class="fa fa-music" aria-hidden="true"></i></button>
+  </nav>
+</footer>
+        </html>
