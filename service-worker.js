@@ -1,4 +1,5 @@
-const CACHE_NAME = "ons-v1";
+// Increase this name when shipped files change so installed copies refresh.
+const CACHE_NAME = "ons-v2";
 
 // Core app shell
 const APP_SHELL = [
