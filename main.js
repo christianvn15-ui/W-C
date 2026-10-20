@@ -105,8 +105,8 @@ if ("serviceWorker" in navigator) {
 
 // -------------------- RELATIONSHIP CARD --------------------
 function updateRelationshipCard() {
-  // Brother: change this one date (YYYY-MM-DD) to update all relationship counters.
-  const startDate = new Date("2026-06-19"); // <-- UPDATE THIS DATE
+  // Brother: change year, monthIndex (0 = January), and day to update all counters.
+  const startDate = new Date(2026, 5, 19); // <-- UPDATE THIS DATE (year, monthIndex, day)
   
   const today = new Date();
   
@@ -125,15 +125,17 @@ function updateRelationshipCard() {
   const monthsTogetherEl = document.getElementById("monthsTogether");
   if (monthsTogetherEl) monthsTogetherEl.textContent = Math.max(0, elapsedMonths).toLocaleString();
 
-  // Monthiversary Countdown (days until last day of current month)
-  const year = today.getFullYear();
-  const month = today.getMonth();
-  const lastDayOfMonth = new Date(year, month + 1, 0);
-  const countdown = Math.ceil((lastDayOfMonth - today) / (1000 * 60 * 60 * 24));
+  // Monthiversary countdown: count down to the 19th of this month or next month.
+  const todayAtMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  let nextMonthiversary = new Date(today.getFullYear(), today.getMonth(), 19);
+  if (todayAtMidnight > nextMonthiversary) {
+    nextMonthiversary = new Date(today.getFullYear(), today.getMonth() + 1, 19);
+  }
+  const countdown = Math.round((nextMonthiversary - todayAtMidnight) / (1000 * 60 * 60 * 24));
   
   const anniversaryCountdownEl = document.getElementById("anniversaryCountdown");
   if (anniversaryCountdownEl) {
-    anniversaryCountdownEl.textContent = countdown + " days left";
+    anniversaryCountdownEl.textContent = countdown === 0 ? "Today!" : `${countdown} days left`;
   }
 }
 
